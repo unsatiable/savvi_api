@@ -1,0 +1,2 @@
+module ClashHelper
+end
