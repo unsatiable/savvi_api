@@ -1,0 +1,10 @@
+<%= form_tag(controller: 'trivia', action: 'form_submit') do %>
+<%= label_tag :number, "Number of Questions" %>
+<%= select_tag :number, options_for_select(1..5) %>
+<%= label_tag :category %>
+<%= select_tag :category, options_for_select([['sports', 21], ['celebrities',26], ['vehicles', 28]]) %>
+<%= label_tag :difficulty %>
+<%= select_tag :difficulty, options_for_select(['easy', 'medium', 'hard']) %>
+<%= submit_tag 'Save' %>
+
+<% end %>

@@ -1,0 +1,16 @@
+<h1> Trivia API </h1>
+<% @response.results.each_with_index do |question, i| %>
+	<h2><%= "#{i + 1}- " %><%= question.question.html_safe%></h2>
+<% end %>
+
+<br>
+<br>
+<button id="show-answers">Show Answers</button>
+
+<div id="answer-block">
+<% @response.results.each_with_index do |answer, i| %>
+	<h3><%= "#{i + 1}- " %><%= answer.correct_answer.html_safe%></h3>	
+<% end %>
+</div>
+
+
